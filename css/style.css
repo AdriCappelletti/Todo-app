@@ -178,9 +178,7 @@ input:checked ~ .checkmark {
 }
 
 .completed{
-  text-decoration: line-through;
-  color: hsl(236, 9%, 61%);
-
+  text-decoration-line: line-through;
 }
 
 

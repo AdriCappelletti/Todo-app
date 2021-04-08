@@ -30,19 +30,31 @@ $taskBtn.onclick = function (e) {
     createTask();
     $newTask.value = "";
   }
-
+  handleTaskCounter();
   e.preventDefault();
 };
 
 $tasks.onclick = function (e) {
   const path = e.path[2];
+  console.log(path);
   const $selectedTask = path.lastChild;
-  const p = document.querySelectorAll(".task-text");
   if (e.target.classList.contains("checkmark")) {
     if ($selectedTask.classList.contains("completed")) {
       $selectedTask.classList.remove("completed");
     } else {
       $selectedTask.classList.add("completed");
     }
+    handleTaskCounter();
   }
 };
+
+function handleTaskCounter() {
+  let $taskCounter = document.querySelector("#task-counter");
+  let completedTasks = document.querySelectorAll(".completed");
+  let totalTasks = document.querySelectorAll(".task-text");
+  $taskCounter.textContent = totalTasks.length - completedTasks.length;
+}
+
+function showCompletedTasks() {
+  const completedBtn = document.querySelector("#completed-task-btn");
+}
