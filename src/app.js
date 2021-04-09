@@ -61,6 +61,7 @@ function handleTaskCounter() {
   $taskCounter.textContent = totalTasks.length - completedTasks.length;
 }
 
+
 const $clearCompletedBtn = document.querySelector("#clear-completed-tasks");
 $clearCompletedBtn.onclick = function () {
   let completed = document.querySelectorAll(".task-completed");
@@ -116,3 +117,4 @@ $switchBtn.addEventListener('click', () => {
   $darkModeIcon.classList.toggle('hide')
   $ligthModeIcon.classList.toggle('hide')
 })
+

@@ -200,9 +200,11 @@ input:checked ~ .checkmark {
   );
 }
 
+
 .hide{
   display: none;
 }
+
 
 .completed{
   text-decoration-line: line-through;
