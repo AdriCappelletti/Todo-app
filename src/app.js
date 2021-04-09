@@ -1,7 +1,11 @@
 const $taskBtn = document.querySelector("#new-task-button");
 const $newTask = document.querySelector("#new-task");
 const $tasks = document.querySelector("#tasks-container");
-const $task = document.querySelector(".task");
+const $switchBtn = document.querySelector('#switch')
+const $darkModeIcon = document.querySelector('#dark-mode')
+const $ligthModeIcon = document.querySelector('#ligth-mode')
+const $header = document.querySelector('header')
+
 function createTask() {
   const $taskContainer = document.querySelector("#tasks-container");
   const $taskDiv = document.createElement("div");
@@ -40,9 +44,11 @@ $tasks.onclick = function (e) {
   const $selectedTask = path.lastChild;
   if (e.target.classList.contains("checkmark")) {
     if ($selectedTask.classList.contains("completed")) {
+      path.classList.remove("task-completed");
       $selectedTask.classList.remove("completed");
     } else {
       $selectedTask.classList.add("completed");
+      path.classList.add("task-completed");
     }
     handleTaskCounter();
   }
@@ -55,6 +61,58 @@ function handleTaskCounter() {
   $taskCounter.textContent = totalTasks.length - completedTasks.length;
 }
 
-function showCompletedTasks() {
-  const completedBtn = document.querySelector("#completed-task-btn");
-}
+const $clearCompletedBtn = document.querySelector("#clear-completed-tasks");
+$clearCompletedBtn.onclick = function () {
+  let completed = document.querySelectorAll(".task-completed");
+  completed.forEach((task) => {
+    task.remove();
+  });
+};
+
+const $completedTasksBtn = document.querySelector("#completed-tasks-btn");
+$completedTasksBtn.onclick = function () {
+  const $task = document.querySelectorAll(".task");
+  console.log("clicked");
+  $task.forEach((task) => {
+    if (task.classList.contains("task-completed")) {
+      task.style.display = "block";
+    }
+    if (!task.classList.contains("task-completed")) {
+      task.style.display = "none";
+    }
+  });
+};
+
+const $allTasksBtn = document.querySelector("#all-tasks-btn");
+$allTasksBtn.onclick = function () {
+  const $task = document.querySelectorAll(".task");
+  $task.forEach((task) => {
+    task.style.display = "block";
+  });
+};
+
+const $activeTasksBtn = document.querySelector("#active-tasks-btn");
+$activeTasksBtn.onclick = function () {
+  const $task = document.querySelectorAll(".task");
+  console.log("click");
+  $task.forEach((task) => {
+    if (!task.classList.contains("task-completed")) {
+      task.style.display = "block";
+    }
+    if (task.classList.contains("task-completed")) {
+      task.style.display = "none";
+    }
+  });
+};
+
+
+
+
+
+
+$switchBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark')
+  $header.classList.toggle('dark')
+  $darkModeIcon.classList.toggle('hide')
+  $ligthModeIcon.classList.toggle('hide')
+})
