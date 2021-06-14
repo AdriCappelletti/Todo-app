@@ -13,7 +13,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <title>Frontend Mentor | Todo app</title>
+    <title>TODO APP</title>
   </head>
   <body>
     <main id="main-wrapper">
@@ -33,12 +33,13 @@
             </svg></span>
           </button>
         </div>
-        <form action="" id="add-task">
-          <button id="new-task-button"></button>
+        <form action="" id="add-task" class="tasks-toggleGroup">
+          <button id="new-task-button" class="button"></button>
           <input type="text" name="task" id="new-task" placeholder="Create a new todo...">
         </div>
       </form>
-      <div id="added-tasks">
+
+  <div id="added-tasks" class="tasks-toggleGroup">
         <div id="tasks-container">
 
         </div>
@@ -56,13 +57,14 @@
       </div>
 
       </section>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/adricappelletti" target="_blank">adricappelletti</a>.
-      </div>
+      
     </main>
+    <div class="attribution">
+      Challenge by
+      <a class="challenge-by" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a class="coded-by" href="https://github.com/adricappelletti" target="_blank">adricappelletti</a>.
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
