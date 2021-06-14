@@ -79,39 +79,47 @@ $clearCompletedBtn.onclick = function () {
   });
 };
 
-const $completedTasksBtn = document.querySelector("#completed-tasks-btn");
-$completedTasksBtn.onclick = function () {
-  const $task = document.querySelectorAll(".task");
-  $task.forEach((task) => {
-    if (task.classList.contains("task-completed")) {
-      task.style.display = "block";
-    }
-    if (!task.classList.contains("task-completed")) {
-      task.style.display = "none";
-    }
-  });
-};
+const $allTasksBtn = document.querySelectorAll(".all-tasks-btn");
+const $activeTasksBtn = document.querySelectorAll(".active-tasks-btn");
+const $completedTasksBtn = document.querySelectorAll(".completed-tasks-btn");
 
-const $allTasksBtn = document.querySelector("#all-tasks-btn");
-$allTasksBtn.onclick = function () {
+$allTasksBtn.forEach((btn)=>{
+  btn.onclick = function () {
   const $task = document.querySelectorAll(".task");
   $task.forEach((task) => {
     task.style.display = "block";
   });
-};
+};})
 
-const $activeTasksBtn = document.querySelector("#active-tasks-btn");
-$activeTasksBtn.onclick = function () {
-  const $task = document.querySelectorAll(".task");
-  $task.forEach((task) => {
-    if (!task.classList.contains("task-completed")) {
-      task.style.display = "block";
-    }
-    if (task.classList.contains("task-completed")) {
-      task.style.display = "none";
-    }
-  });
-};
+$activeTasksBtn.forEach((btn=>{
+  btn.onclick = function () {
+    const $task = document.querySelectorAll(".task");
+    $task.forEach((task) => {
+      if (!task.classList.contains("task-completed")) {
+        task.style.display = "block";
+      }
+      if (task.classList.contains("task-completed")) {
+        task.style.display = "none";
+      }
+    });
+  };
+}))
+
+$completedTasksBtn.forEach((btn)=>{
+  btn.onclick = function () {
+    const $task = document.querySelectorAll(".task");
+    $task.forEach((task) => {
+      if (task.classList.contains("task-completed")) {
+        task.style.display = "block";
+      }
+      if (!task.classList.contains("task-completed")) {
+        task.style.display = "none";
+      }
+    });
+  };
+})
+
+
 
 $switchBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
