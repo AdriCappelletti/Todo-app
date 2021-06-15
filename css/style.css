@@ -289,8 +289,9 @@ input:checked ~ .checkmark {
     width: 95%;
     font-size: 15px;
   }
-  .header{
+  .header, .header.dark{
     height: 10.5em;
-  }
+  } 
+  
 }
 
