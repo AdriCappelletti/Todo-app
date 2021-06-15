@@ -286,10 +286,8 @@ input:checked ~ .checkmark {
   }
   
   #todo-container{
-    /* width: 95%; */
+    width: 95%;
     font-size: 15px;
-    background: transparent;
-    backdrop-filter: none;
   }
   .header{
     height: 10.5em;
