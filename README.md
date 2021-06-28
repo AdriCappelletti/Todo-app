@@ -7,6 +7,7 @@ Also it uses LocalStorage to save your tasks for the nex time you open your brow
 -ESPAÑOL-<br>
 Todo app te permite llevar el control de tus tareas diarias. Podes navegar entre las que estan activas, completas y borrar las que ya terminaste.
 Ademas utiliza LocalStorage para guardar tus tareas para la proxima vez que abras tu navegador.
+<br>
 DEMO = () => https://adricappelletti.github.io/Todo-app/
 ![Design preview for the Todo app coding challenge](./images/todo-app-preview.png)
 
