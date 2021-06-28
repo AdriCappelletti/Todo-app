@@ -1,6 +1,12 @@
 # Frontend Mentor - Todo app
 
-Todo app that allows you to keep track of your daily tasks, navigate betwen those who are active and completed, and clear the ones you already completed.<br>
+-ENGLISH-<br>
+Todo app that allows you to keep track of your daily tasks, navigate betwen those who are active and completed, and clear the ones you already completed.
+Also it uses LocalStorage to save your tasks for the nex time you open your browser<br>
+<br>
+-ESPAÑOL-<br>
+Todo app te permite llevar el control de tus tareas diarias. Podes navegar entre las que estan activas, completas y borrar las que ya terminaste.
+Ademas utiliza LocalStorage para guardar tus tareas para la proxima vez que abras tu navegador.
 DEMO = () => https://adricappelletti.github.io/Todo-app/
 ![Design preview for the Todo app coding challenge](./images/todo-app-preview.png)
 
